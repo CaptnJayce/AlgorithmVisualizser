@@ -1,17 +1,51 @@
 #container{
-	height: 200px;
-	display: flex;
-	align-items: flex-end;
+    height: 700px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
 }
 
 body{
-	display: flex;
-	align-items: center;
-	flex-direction: column;
+    width: 100%;
+    display: flex;
+}
+
+.left{
+    text-align: center;
+    align-items: left;
+    width: 50%;
+}
+
+.right{
+    text-align: center;
+    align-items: right;
+    width: 50%;
 }
 
 .bar{
-	width: 10px;
-	background-color: black;
-	margin: 1px;
+    width: 20px;
+    background-color: black;
+    margin: 8px;
+}
+
+.button {
+	z-index: 2;
+	display: inline-block;
+    outline: 0;
+    cursor: pointer;
+    text-align: center;
+    border: 2px solid red;
+    padding: 7px 16px;
+    min-height: 36px;
+    min-width: 36px;
+    color: white;
+    background: transparent;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 14px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 0px 0px;
+    :hover {
+    	background: gray;
+        outline: 1px solid transparent;
+    }                              
 }

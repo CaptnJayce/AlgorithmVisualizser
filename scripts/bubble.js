@@ -1,11 +1,13 @@
-const n = 20;
-const array = [];
+let array = [];
+let s = 50
+let n = 25
 
 init();
 
 function init(){
+	array = []
 	for(let i = 0; i < n; i++){
-		array[i]=Math.random();
+		array[i]=Math.random() + 0.05; //add extra so bars are always visible
 	}
 	//console.log(array);
 	showBars();
@@ -32,7 +34,7 @@ function animate(moves){
 	showBars(swap);
 	setTimeout(function() {
 		animate(moves);
-	}, 80);
+	}, s);
 }
 
 function bubbleSort(array){
