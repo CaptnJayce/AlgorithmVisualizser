@@ -1,23 +1,21 @@
 # AlgorithmVisualizser
-AlgorithmVisualizser (the 'zs' is intentional)
+(AlgorithmVisualizser (the 'zs' is intentional))
 
-download:\
+### download:
 1) clone repo or download zip\
 2) double click index.html or run "browser_name index.html" in terminal
 
+### to do
+#### sorts
+- [x] bubble
+- [ ] merge
+- [ ] quick
+- [ ] insertion
+- [ ] selection
+- [x] bogo/monkey
+- [ ] miracle
 
-to do:
-
-main sorts:\
-~~bubble sort~~\
-merge sort\
-quick sort
-
-meme sorts:\
-~~bogo sort~~\
-miracle sort
-
-other:\
-information on sorts\
-some animations\
-main page
+#### other
+- [ ] information on sorts
+- [ ] loading animations
+- [ ] main page
