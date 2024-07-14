@@ -5,9 +5,20 @@
     justify-content: center;
 }
 
+#container2{
+    height: 700px;
+    text-align: center;
+}
+
 body{
-    width: 100%;
     display: flex;
+}
+
+.line{
+    margin-top: 16px;
+    margin-bottom: 16px;
+    margin-right: 20px;
+    margin-left: 20px;
 }
 
 .left{

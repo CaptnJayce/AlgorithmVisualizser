@@ -1,5 +1,5 @@
 let array = [];
-let s = 50
+let s = 75
 let n = 25
 
 init();
@@ -7,7 +7,7 @@ init();
 function init(){
 	array = []
 	for(let i = 0; i < n; i++){
-		array[i]=Math.random() + 0.05; //add extra so bars are always visible
+		array[i]=Math.random();
 	}
 	//console.log(array);
 	showBars();
@@ -62,7 +62,7 @@ function showBars(swap){
 
 		if(swap && swap.indices.includes(i)){
 			bar.style.backgroundColor=
-				swap.type=="swap" ? "red":"blue";
+				swap.type=="swap" ? "red":"purple";
 		}
 		container.appendChild(bar)
 	}
