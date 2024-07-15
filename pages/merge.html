@@ -9,9 +9,11 @@
 <body>
 	<div class = "left">
 		<h1>merge sort<h1>
+		<hr class = "line">
+
 		<div id="container"></div>
 
-		<hr class = "line">
+		<hr class = "line2">
 
 		<div>
 			<button class = "button" onClick="init()">new</button>
@@ -21,13 +23,30 @@
 
 	<div class = "right">
 		<h1>explanation</h1>
+		<hr class = "line">
+
 		<div id="container2">
+			<h2 class = "text">how does it work:</h2>
+			<p class = "text">
+				> merge sort works by recursively splitting an input list in half.<br>
+	            ↳ eg: [4, 3, 2, 1] becomes [4, 3] [2, 1]<br> 
+				> it does this until no more splits can be made (hence the recursion)<br> 
+				↳ eg: [4, 3] [2, 1] becomes [4] [3] [2] [1]<br>
+				> then it merges them back together and sorts them accordingly
+			</p>
 
-			<p>red = iterating</p>
-			<p>purple = swapping</p>
-
-			<p>this will be an explanation of merge sort as well as a list of its use cases</p>
-		
+			<h2 class = "text">use cases:</h2>
+			<p class = "text">
+				> can handle large datasets<br>
+				> 'external' sorting, where the data that needs to be sorted exceeds computational power
+			</p>
+			
+			<h2 class = "text">code:</h2>
+			<p class = "text">
+				the code is as follows:
+			</p>
+	
+ 			<img width = "400" height="300"align = "left" class = "text" src="../images/mergesort.png" alt="mergesort.png">
 		</div>
 		<hr class = "line">
 	</div>

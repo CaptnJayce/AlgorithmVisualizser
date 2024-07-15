@@ -12,21 +12,17 @@ function init(){
     showBars();
 }   
 
-function bogoSort(array){
-    const moves = [];
-    while (!isSorted(array)) {
-        shuffle(array, moves);
-    }
-    return moves;
-}
-
-function isSorted(array){
-    for (let i = 1; i < array.length; i++) {
-        if (array[i - 1] > array[i]) {
-            return false;
+function miracleSort(array){
+    let sorted = false
+    do {
+        sorted = true
+        for (let i = 1; i < array.length; i++) {
+            if(array[i] < array[i - 1]) {
+                sorted = false
+                break;
+            }
         }
-    }
-    return true;
+    }while(!sorted)
 }
 
 function showBars(swap){
