@@ -46,6 +46,10 @@ body{
     margin-left: 24px;
 }
 
+.code{
+    margin-left: 24px;
+}
+
 .bar{
     width: 20px;
     background-color: black;

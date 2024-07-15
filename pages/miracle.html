@@ -42,8 +42,22 @@
 			<p class = "text">
 				the code is as follows (all it does is check if the array is sorted as there's no actual sorting algorithm):
 			</p>
-
- 			<img align = "left" class = "text" src="../images/miraclesort.png" alt="miraclesort.png">
+			<div class = "code" style="height:300px;width:885px;border:1px solid #ccc;font:16px/26px Georgia, Garamond, Serif;overflow:auto;">
+				<pre class = "text">
+function miracleSort(array){
+    let sorted = false
+    do {
+        sorted = true
+        for (let i = 1; i < array.length; i++) {
+            if(array[i] < array[i - 1]) {
+                sorted = false
+                break;
+            }
+        }
+    }while(!sorted)
+}
+				</pre>
+			</div>
 		</div>
 		<hr class = "line">
 	</div>

@@ -44,8 +44,21 @@
 			<p class = "text">
 				the code is as follows (continues iterating and swapping until swapped is false):
 			</p>
-	
- 			<img align = "left" class = "text" src="../images/bubblesort.png" alt="bubblesort.png">
+			<div class = "code" style="height:300px;width:885px;border:1px solid #ccc;font:16px/26px Georgia, Garamond, Serif;overflow:auto;">
+				<pre class = "text">
+function bubbleSort(array){
+	do{
+		var swapped = false;
+		for(let i = 1; i < array.length; i++) {
+			moves.push({indices:[i-1,i], type:"comp"});
+				swapped = true;
+				[array[i - 1], array[i]] = [array[i], array[i - 1]]
+			}
+		}
+	}while(swapped);
+}
+				</pre>
+			</div>
 		</div>
 		<hr class = "line">
 	</div>
