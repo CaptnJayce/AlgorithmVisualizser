@@ -1,6 +1,6 @@
 let array = [];
 let s = 100
-let n = 25
+let n = 20
 
 init();
 

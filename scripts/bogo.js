@@ -69,7 +69,7 @@ function showBars(swap){
     for(let i = 0; i < array.length; i++){
         const bar = document.createElement("div");
         bar.style.height = array[i] * 100 + "%";
-        bar.classList.add("bar");
+        bar.classList.add("thiccBar");
 
         if(swap && swap.indices.includes(i)){
             bar.style.backgroundColor = "red"
