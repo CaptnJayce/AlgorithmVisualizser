@@ -1,5 +1,5 @@
 let array = [];
-let s = 100
+let s = 150
 let n = 20
 
 init();

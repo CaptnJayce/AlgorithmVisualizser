@@ -1,6 +1,6 @@
 let array = [];
-let s = 100;
-let n = 5;
+let s = 150
+let n = 5
 
 init();
 

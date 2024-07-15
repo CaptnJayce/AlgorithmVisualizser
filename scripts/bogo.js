@@ -1,6 +1,6 @@
 let array = [];
-let s = 100;
-let n = 5;
+let s = 150
+let n = 5
 
 init();
 
@@ -9,6 +9,7 @@ function init(){
     for(let i = 0; i < n; i++){
         array[i] = Math.random();
     }
+    //console.log(array)
     showBars();
 }   
 
