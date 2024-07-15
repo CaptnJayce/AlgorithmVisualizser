@@ -39,6 +39,16 @@ body{
     margin: 8px;
 }
 
+.bogoBar{
+    width: 40px;
+    background-color: black;
+    margin: 8px;
+}
+
+.highlightedBar{
+    background-color: red;
+}
+
 .button {
 	z-index: 2;
 	display: inline-block;

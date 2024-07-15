@@ -13,48 +13,55 @@ function init(){
 }   
 
 function play(){
-    bogoSort().then(sortedArray => {
-        console.log("Sorted array:", sortedArray);
-    });
+    const copy = [...array];
+    const moves = bogoSort(copy);
+    animate(moves);
 }
 
-function bogoSort(){
-    return new Promise((resolve) => {
-        var isSorted = function(array){
-            for(var i = 1; i < array.length; i++){
-                if (array[i-1] > array[i]) {
-                    console.log("not sorted!");
-                    return false;
-                }
-            }
-            console.log("sorted!");
-            return true;
-        };
+function animate(moves){
+    if(moves.length == 0){
+        showBars();
+        return;
+    }
+    const swap = moves.shift();
+    const [i, j] = swap.indices;
 
-        function shuffle(){
-            var count = array.length;
-            var temp;
-            var index;
+    if(swap.type == "swap"){
+        [array[i], array[j]] = [array[j], array[i]];
+    }
 
-            while(count > 0){
-                index = Math.floor(Math.random() * count);
-                count--;
+    showBars(swap);
+    setTimeout(function() {
+        animate(moves);
+    }, s);
+}
 
-                temp = array[count];
-                array[count] = array[index];
-                array[index] = temp;
-                console.log(array);
-                showBars();
-            }
+function bogoSort(array){
+    const moves = [];
+    while (!isSorted(array)) {
+        shuffle(array, moves);
+    }
+    return moves;
+}
 
-            if (!isSorted(array)) {
-                setTimeout(shuffle, s);
-            } else {
-                resolve(array);
-            }
+function isSorted(array){
+    for (let i = 1; i < array.length; i++) {
+        if (array[i - 1] > array[i]) {
+            return false;
         }
-        shuffle();
-    });
+    }
+    return true;
+}
+
+function shuffle(array, moves){
+    let count = array.length;
+    while(count > 0){
+        let index = Math.floor(Math.random() * count);
+        count--;
+
+        moves.push({indices: [count, index], type: "swap"});
+        [array[count], array[index]] = [array[index], array[count]];
+    }
 }
 
 function showBars(swap){
@@ -65,8 +72,7 @@ function showBars(swap){
         bar.classList.add("bar");
 
         if(swap && swap.indices.includes(i)){
-            bar.style.backgroundColor =
-                swap.type == "swap" ? "red" : "purple";
+            bar.style.backgroundColor = "red"
         }
         container.appendChild(bar);
     }
