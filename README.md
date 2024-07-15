@@ -8,7 +8,7 @@
 ### to do
 #### sorts
 - [x] bubble
-- [ ] merge
+- [x] merge
 - [ ] quick
 - [ ] insertion
 - [ ] selection
