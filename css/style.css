@@ -10,23 +10,27 @@
     text-align: center;
 }
 
+* {
+    margin: 0;
+    background: black;
+}
+
+html, body {
+    height: 100%;
+}
+
 body{
     text-transform: lowercase;
     display: flex;
+    text-align: center;
+    justify-content: center;
+    font-family: 'Roboto Slab';
 }
 
 .line{
-    margin-top: 16px;
-    margin-bottom: 16px;
     margin-right: 20px;
     margin-left: 20px;
-}
-
-.line2{
-    margin-top: 20px;
-    margin-bottom: 16px;
-    margin-right: 20px;
-    margin-left: 20px;
+    margin-bottom: 20px;
 }
 
 .left{
@@ -52,34 +56,37 @@ body{
 
 .bar{
     width: 20px;
-    background-color: black;
-    margin: 8px;
+    background-color: white;
+    margin-left: 8px;
+    margin-right: 8px;
 }
 
 .thiccBar{
     width: 40px;
-    background-color: black;
-    margin: 8px;
+    background-color: white;
+    margin-left: 8px;
+    margin-right: 8px;
 }
 
 .button {
-	z-index: 2;
-	display: inline-block;
-    outline: 0;
     cursor: pointer;
     text-align: center;
     border: 2px solid red;
     padding: 7px 16px;
-    min-height: 36px;
-    min-width: 36px;
     color: white;
     background: transparent;
     border-radius: 4px;
-    font-weight: 500;
     font-size: 14px;
-    box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 0px 0px;
-    :hover {
-    	background: gray;
-        outline: 1px solid transparent;
-    }                              
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.title{
+    margin-top: 30px;
+}
+
+.subtitle{
+    margin-top: 18px;
+    text-align: left;
+    margin-left: 24px;
 }

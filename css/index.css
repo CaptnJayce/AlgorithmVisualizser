@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    background: black;
+}
+
+html, body {
+    height: 100%;
+}
+
+body{
+    text-transform: lowercase;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    font-family: 'Roboto Slab';
+}
+
+.button {
+    font-family: 'Roboto Slab';
+    cursor: pointer;
+    text-align: center;
+    border: 2px solid red;
+    height: 80px;
+    width: 120px;
+    color: white;
+    background: transparent;
+    border-radius: 4px;
+    font-size: 18px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.title{
+    margin-top: 30px;
+}
+
+.subtitle{
+    margin-top: 100px;
+}
