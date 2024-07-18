@@ -15,9 +15,19 @@ body{
     font-family: 'Roboto Slab';
 }
 
+header{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+button{
+    border: 0px;
+    cursor: pointer;
+}
+
 .button {
     font-family: 'Roboto Slab';
-    cursor: pointer;
     text-align: center;
     border: 2px solid red;
     height: 80px;
@@ -36,4 +46,9 @@ body{
 
 .subtitle{
     margin-top: 100px;
+}
+
+.logo{
+    margin-right: 100px;
+    margin-left: 100px;
 }
