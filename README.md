@@ -10,12 +10,12 @@
 - [x] bubble
 - [x] merge
 - [ ] quick
-- [ ] insertion
-- [ ] selection
+- [x] insertion
+- [x] selection
 - [x] bogo/monkey
 - [x] miracle
 
 #### other
 - [ ] information on sorts
 - [ ] loading animations
-- [ ] main page
+- [x] main page
