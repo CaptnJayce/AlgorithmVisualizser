@@ -29,10 +29,17 @@
 		<div id="container2">
 			<h2 class = "subtitle">how does it work:</h2>
 			<p class = "text">
-			</p>
+      > iterates over an input list to find the lowest possible element<br>
+      > swaps it with the next unsorted element at the start of the array<br>
+      ↳ eg: if the first index has already been sorted, the next index is where the next sorted element will go<br> 
+      > continues until sorted
+      </p>
 
 			<h2 class = "subtitle">use cases:</h2>
 			<p class = "text">
+      > if the dataset is small<br>
+      > if there are memory constraints<br>
+      > as a teaching tool
 			</p>
 			
 			<h2 class = "subtitle">code:</h2>
@@ -40,6 +47,20 @@
 			</p>
 			<div class = "code" style="height:300px;width:885px;border:1px solid #ccc;font:16px/26px Georgia, Garamond, Serif;overflow:auto;">
 				<pre class = "text">
+function selectionSort(array) {
+  for (let i = 0; i < array.length - 1; i++) {
+
+    let minIndex = i;
+    for (let j = i + 1; j < array.length; j++) {
+      if (array[j] < array[minIndex]) {
+        minIndex = j;
+      }     
+    }
+    [array[i], array[minIndex]] = [array[minIndex], array[i]];
+  }
+  return array;
+}
+
 				</pre>
 			</div>
 		</div>

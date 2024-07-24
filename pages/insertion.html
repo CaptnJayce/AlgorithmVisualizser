@@ -29,10 +29,17 @@
 		<div id="container2">
 			<h2 class = "subtitle">how does it work:</h2>
 			<p class = "text">
+      > starts from the second element in the input list<br>
+      > if element before it is greater then swap<br>
+      > keep until an element less than it is met<br>
+      > repeat until sorted
 			</p>
 
 			<h2 class = "subtitle">use cases:</h2>
 			<p class = "text">
+      > when a data set is nearly sorted<br>
+      > if there are memory constraints<br>
+      > as a teaching tool
 			</p>
 			
 			<h2 class = "subtitle">code:</h2>
@@ -40,6 +47,22 @@
 			</p>
 			<div class = "code" style="height:300px;width:885px;border:1px solid #ccc;font:16px/26px Georgia, Garamond, Serif;overflow:auto;">
 				<pre class = "text">
+function insertionSort(array, n)  
+{  
+    let i, key, j;  
+    for (i = 1; i < n; i++) 
+    {  
+        key = array[i];  
+        j = i - 1;  
+  
+        while (j >= 0 && array[j] > key) 
+        {  
+            array[j + 1] = arr[j];  
+            j = j - 1;  
+        }  
+        array[j + 1] = key;  
+    }  
+}  
 				</pre>
 			</div>
 		</div>

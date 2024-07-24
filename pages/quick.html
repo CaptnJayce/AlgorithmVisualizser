@@ -29,10 +29,17 @@
 		<div id="container2">
 			<h2 class = "subtitle">how does it work:</h2>
 			<p class = "text">
+      > randomly select a 'pivot' point<br>
+      > to one side of the pivot, sort values larger than the pivot, and lesser on the other side<br>
+      > repeat until sorted
 			</p>
 
 			<h2 class = "subtitle">use cases:</h2>
 			<p class = "text">
+      > used in stock trading for financial analysis<br>
+      > network routing<br>
+      > recommendation systems, such as in ecommerce<br> 
+      ↳ this is due to its speed and versatility. it can be applied almost anywhere 
 			</p>
 			
 			<h2 class = "subtitle">code:</h2>
@@ -40,6 +47,27 @@
 			</p>
 			<div class = "code" style="height:300px;width:885px;border:1px solid #ccc;font:16px/26px Georgia, Garamond, Serif;overflow:auto;">
 				<pre class = "text">
+function partition(array, low, high) { 
+    let pivot = array[high]; 
+    let i = low - 1; 
+  
+    for (let j = low; j <= high - 1; j++) { 
+        if (array[j] < pivot) { 
+            i++; 
+            [array[i], arr[j]] = [arr[j], arr[i]];  
+        } 
+    } 
+    [array[i + 1], arr[high]] = [arr[high], arr[i + 1]];  
+    return i + 1; // Return the partition index 
+} 
+  
+function quickSort(array, low, high) { 
+    if (low >= high) return; 
+    let pi = partition(array, low, high); 
+  
+    quickSort(array, low, pi - 1); 
+    quickSort(array, pi + 1, high); 
+} 
 				</pre>
 			</div>
 		</div>
